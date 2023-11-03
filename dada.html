@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오설록</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="./images/icon.ico" title="파비콘">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'GangwonEdu_OTFBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: 'GangwonEdu_OTFBoldA';
+        }
+        img{
+            max-width:100%;
+        }
+        a{
+            text-decoration: none;
+            color:#000;
+        }
+        li{
+            list-style: none;
+        }
+        #wrap{
+            max-width:1200px;
+            margin:auto;
+        }
+        header{
+            background: #e9ffcc;
+            padding-top:20px;
+        }
+        header div{
+            display: flex;
+        }
+        .title{
+            flex:4;
+            padding-left:500px;
+            padding-bottom:20px;
+            padding-top:5px;
+        }
+        .title a, .login a{
+            color:#406604;
+        }
+        .login{
+            flex:1;
+            padding-top:5px;
+        }
+        header ul{
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2rem;
+            background:#f8ffd7;
+            padding-top:15px;
+            padding-bottom:5px;
+        }
+        header ul a{
+            color:#86c129;
+        }
+        header ul a:hover{
+            color:#406604;
+        }
+        #dadawrap{
+            padding:20px 70px;
+        }
+        #dadawrap h2{
+            font-size:2rem;
+            color:#406604; 
+            margin-bottom:10px;
+        }
+        #dadawrap .dada{
+            border-top:2px solid #86c129;
+            border-bottom:2px solid #86c129;
+            padding:25px;
+            font-size:1.2rem;
+        }
+        #dadawrap h3{
+            color:#406604; 
+            text-align: center;
+            font-size:1.3rem;
+            padding:20px 0;
+        }
+        #dadawrap h3 img{
+            width:30px;
+            height:30px;
+        }
+        #dadawrap .dada3{
+            padding-bottom:20px;
+            text-align: center;
+            color:#86c129;
+        }
+        #dadaslide{
+            overflow:hidden;
+        }
+        #dadaslide div{
+            width:3180px;
+            position:relative;
+            display: flex;
+        }
+        #dadaslide a{
+            width:1060px;
+        }
+        #dadasection{
+            display: flex;
+            margin-top:30px;
+        }
+        .benefit{
+            flex:1;
+        }
+        .benefit h4{
+            display: flex;
+            align-items: center;
+            font-size:1.3rem;
+            color:#406604;
+        }
+        .benefit img{
+            width:30px;
+            height:30px;
+        }
+        .benefit div{
+            
+            display: flex;
+            padding:10px;
+            margin-top:30px;
+        }
+        .benefit div img{
+            width:150px;
+            height:150px;
+        }
+        .benefit div p{
+            display: flex;
+            align-items: center;
+            font-size:1.2rem;
+            margin:0 20px;
+        }
+        .teatime{
+            flex:1;
+            padding:0 10px;
+        }
+        .teatime div{
+            text-align: center;
+        }
+        .teatitle{
+            display: flex;
+            align-items: center;
+            font-size:1.3rem;
+            padding-left:160px;
+        }
+        .teatime h4{
+            color:#406604;
+        }
+        .teatime div h4 img{
+            width:30px;
+            height:30px;
+        }
+        .teatime div a img{
+            width:200px;
+            height:150px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .teatitle1{
+            font-size:1.3rem;
+            margin-top:70px;
+        }
+        .life div{
+            display: flex;
+        }
+        .life div div{
+            display: flex;
+            flex:1;
+            height:100px;
+            align-items: center;
+            margin-top:50px;
+        }
+        .life div div p{
+            border:1px solid #406604;
+            margin-left:25px;
+            line-height: 180%;
+            width:250px;
+            padding:20px 0;
+            border-radius:25px;
+        }
+        .life div div a:hover{
+           text-decoration: underline;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            setInterval(toLeft,2500);
+            function toLeft(){
+        $('#dadaslide div').stop().animate({left:'-1060px'},1000,function(){
+            $('#dadaslide div').append($('#dadaslide a').eq(0));
+            $('#dadaslide div').css('left',0);
+        });
+    }
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div>
+                <div class="title">
+                    <img src="./images/icon/leaf.png" alt="잎사귀">
+                    <h1><a href="./index.html">오설록</a></h1>
+                </div>
+                <div class="login">
+                    <a href="#">로그인 | KOREAN</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="./index.html">제품</a></li>
+                <li><a href="./todaytea.html">오늘의 차</a></li>
+                <li><a href="./dada.html">다다일상</a></li>
+                <li><a href="./brand.html">브랜드</a></li>
+            </ul>
+        </header>
+        <div id="dadawrap">
+            <h2><img src="./images/icon/darkleaf.png" alt="초록잎사귀">다다일상</h2>
+                <div class="dada">
+                    <p>다다일상은 다채롭고 다양한 일상을 위한 오설록 만의 특별한 차 구독 서비스 입니다.</p><br>
+                    <p>
+                        매일 똑같은 하루가 지겹다면 티 한잔으로 당신의 일상에 색깔을 불어 넣으세요<br>
+                        다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.
+                    </p>
+                </div>
+                <h3><img src="./images/icon/darkleaf.png" alt="초록잎사귀">이달의 다다일상</h3>
+                <p class="dada3">오설록 소믈리에가 그 달의 테마와 어울리는 차들을 선정하여 보내드립니다.<br> 다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.</p>
+                <div id="dadaslide">
+                    <div>
+                        <a href="#"><img src="./images/dadaslide1.jpg" alt="11월의 다다일상"></a>
+                        <a href="#"><img src="./images/dadaslide2.jpg" alt="다다일상의 구독서비스"></a>
+                        <a href="#"><img src="./images/dadaslide3.jpg" alt="다다일상 배송박스"></a>
+                    </div>
+                </div>
+                 <div id="dadasection">
+                    <div class="benefit">
+                        <h4><img src="./images/icon/darkleaf.png" alt="초록잎사귀">다다일상 베네핏</h4>
+                        <div>
+                            <a href="#"><img src="./images/dada2.jpg" alt="찻잔사진"></a>
+                            <p>더욱 즐거운 찻자리를 위해<br> 매월 증정되는 스페셜 기프트</p>
+                        </div>
+                        <div>
+                            <p>나만의 일상을 기록할 수 있는 <br>티 다이어리 제공 (6개월 구독자 한정)</p>
+                            <a href="#"><img src="./images/dada3.jpg" alt="다이어리사진"></a>
+                        </div>
+                        <div>
+                            <a href="#"><img src="./images/dada4.jpg" alt="캘린더사진"></a>
+                            <p>이 달의 티타임 챌린지 참여 시 <br>받을 수 있는 챌린지 리워드</p>
+                        </div>
+                    </div>
+                    <div class="teatime">
+                        <div>
+                            <h4 class="teatitle"><img src="./images/icon/darkleaf.png" alt="초록잎사귀">이달의 티타임 챌린지</h4>
+                            <a href="#"><img src="./images/tea1.jpg" alt="녹차사진"></a>
+                            <p>오로지 '좋은 것'들 뿐인 차의 시간들 중 내가 가장 사랑하는 순간들을 소개해주세요.<br> 총 10분을 선정하여 푸짐한 상품도 드려요.</p>
+                        </div>
+                        <div class="life">
+                            <h4 class="teatitle1"><img src="./images/icon/darkleaf.png" alt="초록잎사귀">조금 더 가벼운 라이프도 만나세요.</h4>
+                            <div>
+                                <div>
+                                    <p>다다일상 라이트<br>
+                                    매월 다양한 차들을 가볍게 만나요.<br>
+                                    <a href="#">자세히 보기</a></p>
+                                </div>
+                                <div>
+                                    <p>정기배송<br>
+                                        매월 내가 원하는 차를 편하게 만나요<br>
+                                        <a href="#">자세히 보기</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

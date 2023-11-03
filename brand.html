@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오설록</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="./images/icon.ico" title="파비콘">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'GangwonEdu_OTFBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: 'GangwonEdu_OTFBoldA';
+        }
+        img{
+            max-width:100%;
+        }
+        a{
+            text-decoration: none;
+            color:#000;
+        }
+        li{
+            list-style: none;
+        }
+        #wrap{
+            max-width:1200px;
+            margin:auto;
+        }
+        header{
+            background: #e9ffcc;
+            padding-top:20px;
+        }
+        header div{
+            display: flex;
+        }
+        .title{
+            flex:4;
+            padding-left:500px;
+            padding-bottom:20px;
+            padding-top:5px;
+        }
+        .title a, .login a{
+            color:#406604;
+        }
+        .login{
+            flex:1;
+            padding-top:5px;
+        }
+        header ul{
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2rem;
+            background:#f8ffd7;
+            padding-top:15px;
+            padding-bottom:5px;
+        }
+        header ul a{
+            color:#86c129;
+        }
+        header ul a:hover{
+            color:#406604;
+        }
+        #brandwrap h2{
+            text-align: center;
+            margin-bottom:30px;
+            margin-top:10px;
+            color:#406604;
+        }
+        #brandslide{
+            overflow: hidden;
+        }
+        #brandslide div{
+            width:3600px;
+            position:relative;
+            display: flex;
+        }
+        #brandslide a{
+            width:1200px;
+        }
+        .brand1{
+            display: flex;
+            border-bottom:2px solid #406604;
+            padding-bottom:50px;
+            margin-bottom: 30px;
+        }
+        .brand1 img{
+            margin-left:70px;
+        }
+        .brand1 div{
+            flex:1;
+        }
+        .brandtxt{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin-left:30px;
+            font-size:1.2rem;
+            line-height:180%;
+            color:#86c129;
+        }
+        .brandtxt a{
+            text-decoration:underline;
+        }
+        .brand2 p{
+            text-align: center;
+            margin-bottom:80px;
+            color:#86c129;
+        }
+        .brand2 div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width:600px;
+            margin:auto;
+            margin-left:300px;
+            margin-bottom:100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            setInterval(toLeft,2500);
+            function toLeft(){
+            $('#brandslide div').stop().animate({left:'-1200px'},1000,function(){
+            $('#brandslide div').append($('#brandslide a').eq(0));
+            $('#brandslide div').css('left',0);
+        });
+          }
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div>
+                <div class="title">
+                    <img src="./images/icon/leaf.png" alt="잎사귀">
+                    <h1><a href="./index.html">오설록</a></h1>
+                </div>
+                <div class="login">
+                    <a href="#">로그인 | KOREAN</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="./index.html">제품</a></li>
+                <li><a href="./todaytea.html">오늘의 차</a></li>
+                <li><a href="./dada.html">다다일상</a></li>
+                <li><a href="./brand.html">브랜드</a></li>
+            </ul>
+        </header>
+        <div id="brandwrap">
+            <div id="brandslide">
+                <div>
+                    <a href="#"><img src="./images/brandslide1.jpg" alt="제주도 산이 보이는 풍경"></a>
+                    <a href="#"><img src="./images/brandslide2.jpg" alt="제주도 산과 밭이 보이는 풍경"></a>
+                    <a href="#"><img src="./images/brandslide3.jpg" alt="해가 지고있는 제주도 차 밭 풍경"></a>
+                </div>
+            </div>
+            <h2><img src="./images/icon/darkleaf.png" alt="초록잎사귀">오설록의 제주 차밭</h2>
+            <div class="brand1">
+                <div>
+                    <a href="#"><img src="./images/brand2.jpg" alt="제주 차 밭"></a>
+                </div>
+                <div class="brandtxt">
+                    <p>약 100만 평에 달하는 3개의 오설록 유기농 차 밭은 화산섬의<br> 지역적 기후 환경에 따라 각각 색과 향<br>그리고 맛이 특별한 차를 생산하고 있습니다.<br><br>
+                        <a href="#">유기농/품질관리 인증 정보</a></p>
+                    
+                </div>
+            </div>
+            <div class="brand2">
+                <h2><img src="./images/icon/darkleaf.png" alt="초록잎사귀">오설록의 차가 특별한 이유</h2>
+                <p>1979년, 돌과 바람이 전부였던 제주의땅에서 시작해 최고의 차를 생산하기까지, 오설록의 차가 특별한 이유를 만나보세요.</p>
+                <div>
+                    <a href="#"><img src="./images/brand3.jpg" alt="자연을 숨쉬게 하는 차밭"></a>
+                    <a href="#"><img src="./images/brand4.jpg" alt="그대로의 제주를 담은 차"></a>
+                    <a href="#"><img src="./images/brand5.jpg" alt="깊이를 찾는 발효의 기술"></a>
+                    <a href="#"><img src="./images/brand7.jpg" alt="기술이 만드는 내일의 차"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
